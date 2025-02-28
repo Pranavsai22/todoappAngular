@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.token}`
       });
-      this.http.post<any>('https://todoapp-be-n16d.onrender.com/api/todos/createtask', taskData, { headers }).subscribe(
+      this.http.post<any>('https://todoapp-be-o109.onrender.com/api/todos/createtask', taskData, { headers }).subscribe(
         response => {
           console.log(response);
           this.getTasks(); // Refresh tasks after adding a new one
@@ -56,7 +56,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.get<any>('https://todoapp-be-n16d.onrender.com/api/todos/gettask', { headers }).subscribe(
+    this.http.get<any>('https://todoapp-be-o109.onrender.com/api/todos/gettask', { headers }).subscribe(
       response => {
         console.log(response);
          // Filter tasks with completed: true and important: true
@@ -78,7 +78,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.delete<any>(`https://todoapp-be-n16d.onrender.com/api/todos/deletetask/${taskId}`, { headers }).subscribe(
+    this.http.delete<any>(`https://todoapp-be-o109.onrender.com/api/todos/deletetask/${taskId}`, { headers }).subscribe(
       response => {
         console.log(response);
         alert(response.message)
@@ -96,7 +96,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.patch<any>(`https://todoapp-be-n16d.onrender.com/api/todos/edittask/${taskId}`, { status: true }, { headers }).subscribe(
+    this.http.patch<any>(`https://todoapp-be-o109.onrender.com/api/todos/edittask/${taskId}`, { status: true }, { headers }).subscribe(
       response => {
         console.log(response);
         alert(response.message)
@@ -113,7 +113,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.patch<any>(`https://todoapp-be-n16d.onrender.com/api/todos/edittask/${taskId}`, { important: true }, { headers }).subscribe(
+    this.http.patch<any>(`https://todoapp-be-o109.onrender.com/api/todos/edittask/${taskId}`, { important: true }, { headers }).subscribe(
       response => {
         console.log(response);
         alert(response.message)

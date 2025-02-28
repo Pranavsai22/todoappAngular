@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   // Fetch user data
   fetchUserData(token: string) {
     this.http
-      .get('https://todoapp-be-n16d.onrender.com/api/todos/getuser', {
+      .get('https://todoapp-be-o109.onrender.com/api/todos/getuser', {
         headers: { Authorization: `Bearer ${token}` }
       })
       .subscribe({
