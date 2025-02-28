@@ -28,7 +28,7 @@ export class ResetPassComponent {
     this.isLoading = true;
     const formData = this.resetPasswordForm.value;
 
-    this.http.patch('https://todoapp-be-o109.onrender.com/api/todos/resetpassword', formData).subscribe({
+    this.http.patch('https://todoapp-be-o109.onrender.co/api/todos/resetpassword', formData).subscribe({
       next: (response: any) => {
         alert(response.message || 'Password reset successful!');
       },
